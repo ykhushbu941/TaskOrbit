@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 248 6% 96%;
+    --surface: 0 0% 100%;
+    --surface-muted: 36 20% 93%;
+    --border: 33 13% 85%;
+    --primary: 0 0% 10%;
+    --secondary: 32 36% 35%;
+    --text-primary: 0 0% 7%;
+    --text-secondary: 20 6% 39%;
+    --success: 151 39% 49%;
+    --warning: 38 78% 56%;
+    --danger: 0 71% 62%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --surface: 0 0% 7%;
+    --surface-muted: 0 0% 10%;
+    --border: 0 0% 16%;
+    --primary: 36 50% 81%;
+    --secondary: 40 48% 61%;
+    --text-primary: 37 36% 94%;
+    --text-secondary: 0 0% 54%;
+  }
+
+  body {
+    @apply bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark font-sans antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-xl transition-all duration-300;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-light dark:bg-primary-dark text-white dark:text-background-dark px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity disabled:opacity-50;
+  }
+
+  .input-field {
+    @apply w-full bg-surface-light-muted/50 dark:bg-surface-dark-muted/50 border border-border-light dark:border-border-dark rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-primary-light/30 dark:focus:ring-primary-dark/30 transition-all text-sm;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-xl bg-surface-light/40 dark:bg-surface-dark/40 border border-white/20 dark:border-white/10 shadow-2xl rounded-2xl;
+  }
+
+  .glass-panel {
+    @apply backdrop-blur-md bg-white/5 dark:bg-black/5 border border-white/10 dark:border-white/5;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border-light dark:bg-border-dark rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-text-secondary-light dark:bg-text-secondary-dark;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.animate-float {
+  animation: float 20s infinite ease-in-out;
+}
+
+.animate-float-delayed {
+  animation: float 25s infinite ease-in-out reverse;
+}
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 15s ease infinite;
+}
+
+.card:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+}
+.dark .card:hover {
+  box-shadow: 0 10px 40px -10px rgba(255,255,255,0.05);
+}

@@ -1,0 +1,193 @@
+{
+  "users": [
+    {
+      "id": "admin_1",
+      "name": "Khushbu Yadav",
+      "email": "khushbu@admin.com",
+      "password": "$2a$12$HOLItbyRHx/JjBu87J8W2ePsWQtN5xnL3f88SJVm2VI1V0Ml3.tJC",
+      "role": "admin",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Khushbu",
+      "status": "Active",
+      "createdAt": "2026-05-16T10:49:09.531Z"
+    },
+    {
+      "id": "member_1",
+      "name": "Roopak",
+      "email": "roopak@member.com",
+      "password": "$2a$12$HOLItbyRHx/JjBu87J8W2ePsWQtN5xnL3f88SJVm2VI1V0Ml3.tJC",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Roopak",
+      "status": "Active",
+      "assignedProjectId": "p_1",
+      "createdAt": "2026-05-16T10:49:09.533Z"
+    },
+    {
+      "id": "member_2",
+      "name": "Ansh",
+      "email": "ansh@member.com",
+      "password": "$2a$12$HOLItbyRHx/JjBu87J8W2ePsWQtN5xnL3f88SJVm2VI1V0Ml3.tJC",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Ansh",
+      "status": "Active",
+      "assignedProjectId": "p_2",
+      "createdAt": "2026-05-16T10:49:09.533Z"
+    },
+    {
+      "id": "member_3",
+      "name": "Vansh",
+      "email": "vansh@member.com",
+      "password": "$2a$12$HOLItbyRHx/JjBu87J8W2ePsWQtN5xnL3f88SJVm2VI1V0Ml3.tJC",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Vansh",
+      "status": "Active",
+      "assignedProjectId": "p_3",
+      "createdAt": "2026-05-16T10:49:09.533Z"
+    },
+    {
+      "id": "member_4",
+      "name": "Sanskriti",
+      "email": "sanskriti@member.com",
+      "password": "$2a$12$HOLItbyRHx/JjBu87J8W2ePsWQtN5xnL3f88SJVm2VI1V0Ml3.tJC",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Sanskriti",
+      "status": "Active",
+      "assignedProjectId": "p_1",
+      "createdAt": "2026-05-16T10:49:09.533Z"
+    },
+    {
+      "id": "member_5",
+      "name": "Aarav",
+      "email": "aarav@member.com",
+      "password": "$2a$12$HOLItbyRHx/JjBu87J8W2ePsWQtN5xnL3f88SJVm2VI1V0Ml3.tJC",
+      "role": "member",
+      "avatar": "https://api.dicebear.com/7.x/avataaars/svg?seed=Aarav",
+      "status": "Active",
+      "assignedProjectId": "p_4",
+      "createdAt": "2026-05-16T10:49:09.533Z"
+    }
+  ],
+  "projects": [],
+  "tasks": [],
+  "issues": [],
+  "messages": [],
+  "notifications": [
+    {
+      "id": "n_1",
+      "userId": "admin_1",
+      "title": "New Task Assigned",
+      "message": "Roopak completed the API Authentication Flow.",
+      "type": "task",
+      "read": false,
+      "taskId": "t_2",
+      "createdAt": "2026-05-16T10:49:09.533Z"
+    },
+    {
+      "id": "n_2",
+      "userId": "member_1",
+      "title": "Project Update",
+      "message": "Admin updated the deadline for TaskOrbit SaaS.",
+      "type": "project",
+      "read": true,
+      "projectId": "p_1",
+      "createdAt": "2026-05-16T10:49:09.533Z"
+    },
+    {
+      "userId": "member_1",
+      "title": "New Task Assigned",
+      "message": "You have been assigned to: SOP",
+      "type": "task",
+      "read": false,
+      "taskId": "8e3ddpdcu",
+      "id": "25lcfe97n",
+      "createdAt": "2026-05-16T11:41:22.148Z"
+    }
+  ],
+  "activityLog": [
+    {
+      "id": "a_1",
+      "userId": "admin_1",
+      "userName": "Khushbu Yadav",
+      "action": "launched project",
+      "targetName": "TaskOrbit SaaS",
+      "projectId": "p_1",
+      "timestamp": "2026-05-16T10:49:09.533Z",
+      "createdAt": "2026-05-16T10:49:09.533Z"
+    },
+    {
+      "id": "a_2",
+      "userId": "admin_1",
+      "userName": "Khushbu Yadav",
+      "action": "created task",
+      "targetName": "Design System Architecture",
+      "projectId": "p_1",
+      "timestamp": "2026-05-16T10:49:09.533Z",
+      "createdAt": "2026-05-16T10:49:09.533Z"
+    },
+    {
+      "userId": "00e5o8idw",
+      "userName": "Admin",
+      "action": "launched project",
+      "targetName": "COE ",
+      "projectId": "0zyky6e3w",
+      "timestamp": "2026-05-16T11:40:43.043Z",
+      "id": "8ug6up8z7",
+      "createdAt": "2026-05-16T11:40:43.045Z"
+    },
+    {
+      "userId": "00e5o8idw",
+      "userName": "Admin",
+      "action": "created task",
+      "targetName": "SOP",
+      "projectId": "0zyky6e3w",
+      "timestamp": "2026-05-16T11:41:22.157Z",
+      "id": "82kyrh11s",
+      "createdAt": "2026-05-16T11:41:22.163Z"
+    },
+    {
+      "userId": "00e5o8idw",
+      "userName": "Unknown User",
+      "action": "created task",
+      "targetName": "SOP",
+      "timestamp": "2026-05-16T11:41:22.194Z",
+      "id": "8e7qrlzc7",
+      "createdAt": "2026-05-16T11:41:22.196Z"
+    },
+    {
+      "userId": "00e5o8idw",
+      "userName": "Admin",
+      "action": "updated task",
+      "targetName": "Design System Architecture",
+      "projectId": "p_1",
+      "timestamp": "2026-05-16T11:46:59.676Z",
+      "id": "sh5mk3iwx",
+      "createdAt": "2026-05-16T11:46:59.679Z"
+    },
+    {
+      "userId": "00e5o8idw",
+      "userName": "Admin",
+      "action": "updated task",
+      "targetName": "Real-time Messaging Engine",
+      "projectId": "p_1",
+      "timestamp": "2026-05-16T11:47:17.978Z",
+      "id": "ajaj08wxx",
+      "createdAt": "2026-05-16T11:47:17.981Z"
+    }
+  ],
+  "tags": [
+    {
+      "id": "1",
+      "name": "Design",
+      "color": "#E8D5B7"
+    },
+    {
+      "id": "2",
+      "name": "Bug",
+      "color": "#E05C5C"
+    },
+    {
+      "id": "3",
+      "name": "Urgent",
+      "color": "#E8A838"
+    }
+  ]
+}
