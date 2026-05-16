@@ -9,12 +9,21 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: [
-      /^http:\/\/localhost:\d+$/,
-      /^http:\/\/127\.0\.0\.1:\d+$/,
-      /^https:\/\/.*\.vercel\.app$/,
-      /^https:\/\/.*\.railway\.app$/
-    ],
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      const allowedPatterns = [
+        /^http:\/\/localhost:\d+$/,
+        /^http:\/\/127\.0\.0\.1:\d+$/,
+        /\.vercel\.app$/,
+        /\.railway\.app$/
+      ];
+      const isAllowed = allowedPatterns.some(pattern => pattern.test(origin));
+      if (isAllowed) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
     methods: ["GET", "POST"],
     credentials: true
   }
