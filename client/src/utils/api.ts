@@ -4,7 +4,7 @@ import { useAuthStore } from '../store/useStore';
 
 const API_HOST = window.location.hostname;
 const baseURL = import.meta.env.PROD 
-  ? '/api'
+  ? 'https://taskorbit2-production.up.railway.app/api'
   : `http://${API_HOST}:5000/api`;
 
 const api = axios.create({
